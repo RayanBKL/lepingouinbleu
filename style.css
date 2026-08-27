@@ -1189,22 +1189,177 @@ button, input, select, textarea {
   margin: 0 auto;
 }
 
-/* Masonry Columns (columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4) */
-.portfolio-masonry-grid {
-  column-count: 1;
-  column-gap: 1rem;
+.portfolio-wrapper {
+  position: relative;
   width: 100%;
 }
 
-@media (min-width: 576px) {
+/* Version Mobile (< 768px) : Carrousel 1 image à la fois avec swipe tactile */
+@media (max-width: 767px) {
+  .portfolio-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
   .portfolio-masonry-grid {
-    column-count: 2;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    gap: 0 !important;
+    padding: 0.5rem 0 !important;
+    width: 100% !important;
+    column-count: auto !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .portfolio-masonry-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .port-masonry-item {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+    break-inside: auto !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    background: #E8EEF5 !important;
+    box-shadow: 0 10px 30px rgba(24, 56, 92, 0.14) !important;
+    cursor: zoom-in !important;
+    position: relative !important;
+  }
+
+  .port-masonry-item img {
+    width: 100% !important;
+    height: 380px !important;
+    max-height: 55vh !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .portfolio-mobile-controls {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+
+  .port-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(24, 56, 92, 0.15);
+    color: var(--color-pingouin-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(24, 56, 92, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .port-nav-btn:active {
+    transform: scale(0.92);
+    background: var(--color-sand);
+  }
+
+  .port-mobile-counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(24, 56, 92, 0.15);
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 14px rgba(24, 56, 92, 0.08);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-pingouin-deep);
+    letter-spacing: 0.05em;
+  }
+
+  .port-counter-current {
+    color: var(--color-pingouin-blue);
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  .port-counter-sep {
+    opacity: 0.4;
+  }
+
+  .port-counter-total {
+    color: var(--color-slate-muted);
+  }
+
+  .portfolio-mobile-hint {
+    display: block !important;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-slate-muted);
+    font-weight: 500;
   }
 }
 
+/* Version Desktop & Tablette (>= 768px) : Belle Grille Masonry */
 @media (min-width: 768px) {
+  .portfolio-mobile-controls,
+  .portfolio-mobile-hint {
+    display: none !important;
+  }
+
   .portfolio-masonry-grid {
+    display: block;
     column-count: 3;
+    column-gap: 1rem;
+    width: 100%;
+  }
+
+  .port-masonry-item {
+    position: relative;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: zoom-in;
+    background-color: #E2E8F0;
+    box-shadow: var(--shadow-subtle);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s ease;
+  }
+
+  .port-masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: transform 0.4s var(--ease-smooth);
+  }
+
+  .port-masonry-item:hover {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-heavy);
+  }
+
+  .port-masonry-item:active {
+    transform: scale(0.95);
   }
 }
 
@@ -1212,35 +1367,6 @@ button, input, select, textarea {
   .portfolio-masonry-grid {
     column-count: 4;
   }
-}
-
-.port-masonry-item {
-  position: relative;
-  margin-bottom: 1rem;
-  break-inside: avoid;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  cursor: zoom-in;
-  background-color: #E2E8F0;
-  box-shadow: var(--shadow-subtle);
-  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s ease;
-}
-
-.port-masonry-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius-md);
-  transition: transform 0.4s var(--ease-smooth);
-}
-
-.port-masonry-item:hover {
-  transform: scale(0.98);
-  box-shadow: var(--shadow-heavy);
-}
-
-.port-masonry-item:active {
-  transform: scale(0.95);
 }
 
 /* Modal Shared-Element Zoom */

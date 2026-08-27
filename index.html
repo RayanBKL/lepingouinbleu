@@ -534,7 +534,7 @@
             <span class="amenity-chip">🏖️ Parasols & Matelas épais</span>
             <span class="amenity-chip">🍹 Service au transat</span>
             <span class="amenity-chip">🚿 Douche d'eau douce</span>
-            <span class="amenity-chip">⚓ Accueil annexe bateau (VHF 09)</span>
+            <span class="amenity-chip">🌊 Accès direct bord de mer</span>
           </div>
 
           <a href="#reservation" class="btn btn-primary">Réserver un Transat</a>
@@ -562,73 +562,96 @@
         </p>
       </div>
 
-      <!-- Grille Masonry Réactive (4 colonnes, fluide et pure) -->
-      <div class="portfolio-masonry-grid" id="portfolioGrid">
-        
-        <div class="port-masonry-item" data-id="1">
-          <img src="image/unnamed (8).webp" alt="Terrasse sous les tamaris face à la mer" loading="lazy">
+      <!-- Grille Desktop (Masonry) / Carrousel Mobile (1 image à la fois) -->
+      <div class="portfolio-wrapper">
+        <div class="portfolio-masonry-grid" id="portfolioGrid">
+          
+          <div class="port-masonry-item" data-id="1">
+            <img src="image/unnamed (8).webp" alt="Terrasse sous les tamaris face à la mer" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="2">
+            <img src="image/unnamed (15).webp" alt="Table sur le deck en bois face à la mer avec gambas et rosé" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="3">
+            <img src="image/unnamed (4).webp" alt="Poisson grillé et moules au barbecue" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="4">
+            <img src="image/plage.webp" alt="Plage privée et transats face au golfe" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="5">
+            <img src="image/unnamed (3).webp" alt="Transats bleus et parasols sur le sable chaud" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="6">
+            <img src="image/unnamed.webp" alt="Gambas sauvages grillées au barbecue sauce chimichurri" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="7">
+            <img src="image/unnamed (2).webp" alt="Cheese burger artisanal du Pingouin Maison Laveissière" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="8">
+            <img src="image/unnamed (5).webp" alt="Carpaccio de bœuf charolais et burrata crémeuse" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="9">
+            <img src="image/unnamed (6).webp" alt="Bière artisanale officielle Le Pingouin Bleu" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="10">
+            <img src="image/unnamed (7).webp" alt="Travers de porc grillé mariné au miel et épices" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="11">
+            <img src="image/unnamed (9).webp" alt="Tranche d'espadon grillée sauce vierge" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="12">
+            <img src="image/unnamed (10).webp" alt="Cocktail signature frais servi au bar de plage" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="13">
+            <img src="image/unnamed (11).webp" alt="Salade au fromage de chèvre chaud de Montmeyan" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="14">
+            <img src="image/unnamed (12).webp" alt="Tartare de saumon frais découpé au couteau" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="15">
+            <img src="image/unnamed (13).webp" alt="Salade italienne burrata et mortadelle" loading="lazy">
+          </div>
+
+          <div class="port-masonry-item" data-id="16">
+            <img src="image/unnamed (14).webp" alt="Tarte au chocolat fondant caramel beurre salé" loading="lazy">
+          </div>
+
         </div>
 
-        <div class="port-masonry-item" data-id="2">
-          <img src="image/unnamed (15).webp" alt="Table sur le deck en bois face à la mer avec gambas et rosé" loading="lazy">
+        <!-- Contrôles Mobile : Navigation 1 image à la fois -->
+        <div class="portfolio-mobile-controls" id="portfolioMobileControls">
+          <button class="port-nav-btn prev" id="portPrevBtn" aria-label="Photo précédente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          
+          <div class="port-mobile-counter">
+            <span class="port-counter-current" id="portCurrentIndex">01</span>
+            <span class="port-counter-sep">/</span>
+            <span class="port-counter-total" id="portTotalCount">16</span>
+          </div>
+
+          <button class="port-nav-btn next" id="portNextBtn" aria-label="Photo suivante">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
 
-        <div class="port-masonry-item" data-id="3">
-          <img src="image/unnamed (4).webp" alt="Poisson grillé et moules au barbecue" loading="lazy">
+        <div class="portfolio-mobile-hint">
+          <span>👈 Glissez pour faire défiler les photos 👉</span>
         </div>
-
-        <div class="port-masonry-item" data-id="4">
-          <img src="image/plage.webp" alt="Plage privée et transats face au golfe" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="5">
-          <img src="image/unnamed (3).webp" alt="Transats bleus et parasols sur le sable chaud" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="6">
-          <img src="image/unnamed.webp" alt="Gambas sauvages grillées au barbecue sauce chimichurri" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="7">
-          <img src="image/unnamed (2).webp" alt="Cheese burger artisanal du Pingouin Maison Laveissière" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="8">
-          <img src="image/unnamed (5).webp" alt="Carpaccio de bœuf charolais et burrata crémeuse" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="9">
-          <img src="image/unnamed (6).webp" alt="Bière artisanale officielle Le Pingouin Bleu" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="10">
-          <img src="image/unnamed (7).webp" alt="Travers de porc grillé mariné au miel et épices" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="11">
-          <img src="image/unnamed (9).webp" alt="Tranche d'espadon grillée sauce vierge" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="12">
-          <img src="image/unnamed (10).webp" alt="Cocktail signature frais servi au bar de plage" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="13">
-          <img src="image/unnamed (11).webp" alt="Salade au fromage de chèvre chaud de Montmeyan" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="14">
-          <img src="image/unnamed (12).webp" alt="Tartare de saumon frais découpé au couteau" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="15">
-          <img src="image/unnamed (13).webp" alt="Salade italienne burrata et mortadelle" loading="lazy">
-        </div>
-
-        <div class="port-masonry-item" data-id="16">
-          <img src="image/unnamed (14).webp" alt="Tarte au chocolat fondant caramel beurre salé" loading="lazy">
-        </div>
-
       </div>
 
     </div>
@@ -812,7 +835,7 @@
 
             <div class="form-group">
               <label for="resNotes" class="form-label">Demandes particulières (Optionnel)</label>
-              <input type="text" id="resNotes" class="form-input" placeholder="Anniversaire, chaise haute, amarrage bateau...">
+              <input type="text" id="resNotes" class="form-input" placeholder="Anniversaire, table ombragée, chaise haute...">
             </div>
 
             <button type="submit" class="btn btn-primary btn-submit-full">
@@ -989,7 +1012,6 @@
             <li><strong>Téléphone :</strong> +33 (0)4 94 55 12 80</li>
             <li><strong>WhatsApp Plage :</strong> +33 (0)6 12 45 78 90</li>
             <li><strong>Email :</strong> contact@lepingouinbleu-grimaud.fr</li>
-            <li><strong>VHF Canal :</strong> 09 (Accueil Bateau)</li>
           </ul>
         </div>
 

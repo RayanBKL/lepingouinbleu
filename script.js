@@ -125,9 +125,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     6. GALERIE PHOTO : SHARED-ELEMENT FULLSCREEN ZOOM MODAL
+     6. GALERIE PHOTO : SLIDER MOBILE (1 IMAGE À LA FOIS) & ZOOM MODAL
      -------------------------------------------------------------------------- */
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  const portPrevBtn = document.getElementById('portPrevBtn');
+  const portNextBtn = document.getElementById('portNextBtn');
+  const portCurrentIndex = document.getElementById('portCurrentIndex');
+  const portTotalCount = document.getElementById('portTotalCount');
   const galleryItems = document.querySelectorAll('.port-masonry-item');
+  const totalGalleryItems = galleryItems.length;
+
+  if (portTotalCount) {
+    portTotalCount.textContent = String(totalGalleryItems).padStart(2, '0');
+  }
+
+  function updateMobilePortfolioCounter() {
+    if (!portfolioGrid || !portCurrentIndex) return;
+    const scrollLeft = portfolioGrid.scrollLeft;
+    const itemWidth = portfolioGrid.clientWidth || 1;
+    const activeIndex = Math.min(
+      Math.max(Math.round(scrollLeft / itemWidth) + 1, 1),
+      totalGalleryItems
+    );
+    portCurrentIndex.textContent = String(activeIndex).padStart(2, '0');
+  }
+
+  if (portfolioGrid) {
+    let scrollTimeout;
+    portfolioGrid.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(updateMobilePortfolioCounter, 40);
+    }, { passive: true });
+  }
+
+  if (portPrevBtn && portfolioGrid) {
+    portPrevBtn.addEventListener('click', () => {
+      portfolioGrid.scrollBy({ left: -portfolioGrid.clientWidth, behavior: 'smooth' });
+    });
+  }
+
+  if (portNextBtn && portfolioGrid) {
+    portNextBtn.addEventListener('click', () => {
+      portfolioGrid.scrollBy({ left: portfolioGrid.clientWidth, behavior: 'smooth' });
+    });
+  }
+
   const galleryModal = document.getElementById('galleryModal');
   const galleryModalImg = document.getElementById('galleryModalImg');
   const galleryBackdrop = document.getElementById('galleryBackdrop');
@@ -153,8 +195,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  let isSwipingGrid = false;
+  let gridTouchStartX = 0;
+  let gridTouchStartY = 0;
+
+  if (portfolioGrid) {
+    portfolioGrid.addEventListener('touchstart', (e) => {
+      isSwipingGrid = false;
+      gridTouchStartX = e.touches[0].clientX;
+      gridTouchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    portfolioGrid.addEventListener('touchmove', (e) => {
+      const deltaX = Math.abs(e.touches[0].clientX - gridTouchStartX);
+      const deltaY = Math.abs(e.touches[0].clientY - gridTouchStartY);
+      if (deltaX > 8 || deltaY > 8) {
+        isSwipingGrid = true;
+      }
+    }, { passive: true });
+  }
+
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
+      if (isSwipingGrid) return;
       const img = item.querySelector('img');
       if (img) {
         openGalleryModal(img.src, img.alt);
