@@ -98,10 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     5. ONGLETS REGROUPÉS DE LA CARTE DU RESTAURANT
+     5. ONGLETS REGROUPÉS DE LA CARTE DU RESTAURANT (AVEC TOUTE LA CARTE)
      -------------------------------------------------------------------------- */
   const menuTabBtns = document.querySelectorAll('.menu-tab-btn');
-  const menuCategories = document.querySelectorAll('.menu-category-group');
+  const menuSections = document.querySelectorAll('.menu-section-wrapper');
 
   menuTabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -114,11 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
 
-      menuCategories.forEach(cat => {
-        if (cat.getAttribute('data-cat') === targetCategory) {
-          cat.classList.remove('is-hidden');
+      menuSections.forEach(sec => {
+        const cat = sec.getAttribute('data-menu-cat');
+        if (targetCategory === 'tous' || cat === targetCategory) {
+          sec.style.display = 'block';
         } else {
-          cat.classList.add('is-hidden');
+          sec.style.display = 'none';
         }
       });
     });
