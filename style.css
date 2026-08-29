@@ -699,30 +699,7 @@ button, input, select, textarea {
   60% { transform: translateY(3px); }
 }
 
-@media (max-width: 768px) {
-  .hero-stage-white {
-    min-height: 88vh;
-    padding-top: 7rem;
-    padding-bottom: 3rem;
-  }
-  .hero-emblem-wrapper {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1.25rem;
-  }
-  .hero-luxury-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.85rem;
-    margin-bottom: 2.5rem;
-  }
-  .btn-hero-carte,
-  .btn-hero-reserver {
-    width: 100%;
-    max-width: 320px;
-    padding: 0.85rem 1.75rem;
-  }
-}
+
 
 /* Bandeau Catégorie de la Carte */
 .menu-subgroup-banner {
@@ -2242,103 +2219,432 @@ button, input, select, textarea {
 /* --------------------------------------------------------------------------
    16. OPTIMISATIONS RESPONSIVES MOBILES & TABLETTES
    -------------------------------------------------------------------------- */
+
+/* Tablet & Mobile Nav (< 900px) */
+@media (max-width: 899px) {
+  .navbar-wrapper {
+    top: 0.5rem;
+    left: 0;
+    width: 100%;
+  }
+  .navbar-container {
+    margin: 0 0.65rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--radius-full);
+  }
+  .brand-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .brand-sub {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
+  .btn-nav {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.76rem;
+    gap: 0.35rem;
+  }
+  .btn-nav svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* Smartphone Portrait (< 768px) */
 @media (max-width: 767px) {
-  .hero-stage-centered {
-    min-height: 88vh;
-    padding-top: 6.5rem;
-    padding-bottom: 3.5rem;
+  /* Layout global */
+  .container {
+    padding: 0 1rem;
   }
-
-  .hero-center-logo-box {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 1.25rem;
+  .section-block {
+    padding: 3.5rem 0;
   }
-
-  .hero-logo-disc {
-    width: 95px;
-    height: 95px;
-    padding: 0.95rem;
+  .section-kicker {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-
-  .hero-grand-title {
-    font-size: 2.35rem;
-    letter-spacing: 0.02em;
+  .kicker-line {
+    width: 18px;
   }
-
-  .hero-grand-subhead {
-    font-size: 1rem;
-    line-height: 1.35;
-    margin-bottom: 1rem;
+  .kicker-text {
+    font-size: 0.75rem;
   }
-
-  .hero-grand-lead {
+  .section-title {
+    font-size: 1.65rem;
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+  }
+  .section-subtitle {
     font-size: 0.92rem;
-    line-height: 1.6;
-    margin-bottom: 1.75rem;
-    padding: 0 0.5rem;
+    line-height: 1.5;
   }
 
-  .hero-grand-actions {
+  /* 1. HERO ACCUEIL ÉPURÉ SUR MOBILE */
+  .hero-stage-white {
+    min-height: 100svh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+    padding-top: 4.8rem;
+    padding-bottom: 1.25rem;
+    display: flex;
     flex-direction: column;
-    gap: 0.85rem;
-    width: 100%;
-    max-width: 340px;
-  }
-
-  .hero-main-cta {
-    width: 100%;
+    align-items: center;
     justify-content: center;
-    padding: 0.95rem 1.5rem;
-    font-size: 0.96rem;
   }
-
-  .hero-metrics-ribbon {
-    gap: 0.75rem;
-    padding: 0.75rem 1.25rem;
+  .hero-white-content {
     width: 100%;
     max-width: 360px;
-    justify-content: space-around;
+    padding: 0 0.75rem;
+    margin: auto 0;
+  }
+  .hero-emblem-wrapper {
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    max-height: 72px;
+    margin: 0 auto 0.6rem;
+  }
+  .hero-emblem-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .hero-heritage-line {
+    margin-bottom: 0.4rem;
+    gap: 0.4rem;
+  }
+  .heritage-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+  }
+  .heritage-dot {
+    width: 3px;
+    height: 3px;
+  }
+  .hero-luxury-title {
+    font-size: 1.8rem;
+    line-height: 1.08;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+  }
+  .hero-luxury-subtitle {
+    font-size: 0.86rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+  .hero-luxury-desc {
+    font-size: 0.8rem;
+    line-height: 1.48;
+    color: var(--color-charcoal-muted);
+    max-width: 300px;
+    margin: 0 auto 1.15rem;
+  }
+  .hero-luxury-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 1rem;
+  }
+  .btn-hero-carte,
+  .btn-hero-reserver {
+    flex: 1;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .btn-hero-carte svg,
+  .btn-hero-reserver svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+  .hero-scroll-invite {
+    margin-top: 0.2rem;
+    gap: 0.2rem;
+  }
+  .scroll-invite-text {
+    font-size: 0.64rem;
+    letter-spacing: 0.1em;
+  }
+  .scroll-invite-arrow {
+    width: 13px;
+    height: 13px;
   }
 
-  .m-val {
-    font-size: 1.15rem;
+  /* 2. L'ESPRIT */
+  .asym-grid-story {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .story-paragraph {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .story-pillars {
+    margin: 1.5rem 0;
+    gap: 1.25rem;
+  }
+  .pillar-row {
+    gap: 0.9rem;
+  }
+  .pillar-bullet {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+  .pillar-bullet svg {
+    width: 18px;
+    height: 18px;
+  }
+  .pillar-heading {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .pillar-text {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .story-image-frame {
+    border-radius: var(--radius-lg);
+    max-height: 280px;
+    overflow: hidden;
+  }
+  .story-image-frame img {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
   }
 
-  .m-txt {
-    font-size: 0.7rem;
-  }
-
+  /* 3. LA CARTE & ONGLETS SCROLLABLES */
   .menu-tabs {
-    gap: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.45rem;
+    padding: 0.4rem 0.25rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    scrollbar-width: none;
   }
-
+  .menu-tabs::-webkit-scrollbar {
+    display: none;
+  }
   .menu-tab-btn {
-    padding: 0.6rem 1.15rem;
-    font-size: 0.85rem;
+    flex: 0 0 auto;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.82rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    gap: 0.4rem;
   }
-
+  .menu-tab-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+  .carte-display-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .menu-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
   .menu-item-row {
-    padding: 1.1rem 1.15rem;
+    padding: 1rem 1.15rem;
+    border-radius: var(--radius-md);
   }
-
   .menu-item-name {
+    font-size: 0.96rem;
+    line-height: 1.3;
+  }
+  .menu-item-price {
+    font-size: 1.05rem;
+  }
+  .menu-item-tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.55rem;
+  }
+  .menu-item-desc {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-top: 0.4rem;
+  }
+  .menu-subgroup-banner {
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .menu-subgroup-banner h3 {
     font-size: 0.98rem;
   }
-
-  .menu-item-price {
-    font-size: 1.1rem;
-  }
-
-  .menu-item-desc {
-    font-size: 0.84rem;
-  }
-
-  .menu-subgroup-banner {
+  .menu-accompany-note {
     padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  .carte-spotlight-panel {
+    margin-top: 1rem;
+  }
+  .spotlight-visual-card img {
+    max-height: 220px;
+    border-radius: var(--radius-md);
+  }
+  .menu-highlight-card {
+    padding: 1.25rem;
   }
 
-  .menu-subgroup-banner h3 {
+  /* 4. LA PLAGE */
+  .asym-grid-plage {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .plage-media-col {
+    max-height: 260px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .plage-media-col img {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .plage-features-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .plage-card {
+    padding: 1.15rem;
+    border-radius: var(--radius-md);
+  }
+  .plage-card-title {
     font-size: 1rem;
+  }
+  .plage-card-text {
+    font-size: 0.82rem;
+  }
+
+  /* 5. RÉSERVATION & ACCÈS */
+  .booking-split-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .booking-form-box {
+    padding: 1.75rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+  .form-header {
+    margin-bottom: 1.5rem;
+  }
+  .form-title {
+    font-size: 1.6rem;
+  }
+  .form-sub {
+    font-size: 0.85rem;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .form-input,
+  .form-select {
+    font-size: 16px;
+    padding: 0.75rem 0.9rem;
+  }
+  .exp-selector-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .exp-card {
+    padding: 0.75rem 0.9rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+  }
+  .btn-submit-full {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Accès & Avis Google */
+  .info-card-box {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+  .info-list {
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-val {
+    font-size: 0.88rem;
+  }
+  .info-google-reviews-card {
+    padding: 1.15rem;
+    margin-top: 1.25rem;
+  }
+  .google-mini-reviews {
+    padding: 0.6rem 0;
+    gap: 0.6rem;
+  }
+  .mini-quote {
+    font-size: 0.8rem;
+  }
+  .btn-google-reviews-link {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.85rem;
+  }
+
+  /* 6. FOOTER */
+  .site-footer {
+    padding: 3.5rem 0 1.5rem;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Très petits écrans (< 360px) */
+@media (max-width: 359px) {
+  .hero-emblem-wrapper {
+    width: 62px;
+    height: 62px;
+  }
+  .hero-luxury-title {
+    font-size: 1.55rem;
+  }
+  .hero-luxury-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .btn-hero-carte,
+  .btn-hero-reserver {
+    width: 100%;
   }
 }
