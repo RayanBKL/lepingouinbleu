@@ -48,7 +48,7 @@
       <!-- Logo et Identité Officielle -->
       <a href="#hero" class="nav-brand" aria-label="Retour à l'accueil Le Pingouin Bleu">
         <div class="brand-logo-img">
-          <img src="assets/images/logo_pingouin_clean.png?v=3" alt="Logo Le Pingouin Bleu" class="nav-logo-svg">
+          <img src="assets/images/logo_pingouin_clean.png?v=4" alt="Logo Le Pingouin Bleu" class="nav-logo-svg">
         </div>
         <div class="brand-text">
           <span class="brand-name">LE PINGOUIN BLEU</span>
@@ -101,77 +101,70 @@
 
   <!-- ========================================================================= -->
   <!-- ========================================================================= -->
-  <!-- HERO SECTION CENTRÉE : L'ÂME DU PINGOUIN BLEU (EST. 1989) -->
+  <!-- HERO SECTION : ACCUEIL ÉPURÉ & PRESTIGE (FOND BLANC, LOGO CENTRÉ, 2 BOUTONS) -->
   <!-- ========================================================================= -->
-  <section class="hero-stage hero-stage-centered" id="hero">
+  <section class="hero-stage hero-stage-white" id="hero">
     
-    <!-- Arrière-plan panoramique immersif avec dégradé Riviera -->
-    <div class="hero-backdrop-wrap" aria-hidden="true">
-      <img src="image/unnamed (8).webp" alt="Terrasse Le Pingouin Bleu face à la mer à Grimaud" class="hero-backdrop-img">
-      <div class="hero-backdrop-overlay"></div>
-      <div class="hero-glow-orb hero-orb-center"></div>
-      <div class="hero-glow-orb hero-orb-gold"></div>
+    <!-- Lueur subtile marine & or d'arrière-plan très douce (pureté blanche) -->
+    <div class="hero-white-ambient" aria-hidden="true">
+      <div class="ambient-glow-center"></div>
     </div>
 
-    <div class="container hero-centered-content">
+    <div class="container hero-white-content">
       
-      <!-- LOGO ANIMÉ EN PLEIN MILIEU -->
-      <div class="hero-center-logo-box">
-        <div class="hero-logo-halo-ring"></div>
-        <div class="hero-logo-disc">
-          <img src="assets/images/logo_pingouin_clean.png?v=3" alt="Logo Le Pingouin Bleu Grimaud" class="hero-logo-central-img">
-        </div>
+      <!-- LOGO PINGOUIN OFFICIEL AU MILIEU -->
+      <div class="hero-emblem-wrapper">
+        <img src="assets/images/logo_pingouin_clean.png?v=4" alt="Logo Officiel Le Pingouin Bleu - Grimaud" class="hero-emblem-image">
       </div>
 
-      <!-- Badge de Prestige Fondé en 1989 -->
-      <div class="hero-heritage-badge">
-        <span class="hero-live-dot"></span>
-        <span>MAISON FONDÉE EN 1989 • GOLFE DE SAINT-TROPEZ</span>
+      <!-- Ligne d'Héritage -->
+      <div class="hero-heritage-line">
+        <span class="heritage-dot"></span>
+        <span class="heritage-label">MAISON FONDÉE EN 1989 • GRIMAUD</span>
+        <span class="heritage-dot"></span>
       </div>
 
-      <!-- Nom du Restaurant en Grand -->
-      <h1 class="hero-grand-title">
+      <!-- Grand Titre Officiel -->
+      <h1 class="hero-luxury-title">
         LE PINGOUIN BLEU
       </h1>
 
-      <!-- Sous-titre & Accroche -->
-      <div class="hero-grand-subhead">
-        Restaurant de Plage Privée • Grillades au Feu de Bois
-      </div>
-
-      <p class="hero-grand-lead">
-        Niché sous l'ombre généreuse des tamaris centenaires face à la Méditerranée à Grimaud. Moules au barbecue, poissons frais, viandes d'exception et farniente les pieds dans l'eau.
+      <!-- Sous-titre & Spécialités -->
+      <p class="hero-luxury-subtitle">
+        Restaurant de Plage Privée • Grillades au Barbecue
       </p>
 
-      <!-- LES 2 BOUTONS CENTRÉS -->
-      <div class="hero-grand-actions">
-        <a href="#carte" class="btn btn-primary hero-main-cta btn-shine">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-          <span>Découvrir la Carte</span>
+      <!-- Phrase d'ambiance raffinée -->
+      <p class="hero-luxury-desc">
+        Niché sous l'ombre généreuse des tamaris centenaires face à la Méditerranée. Poissons frais et viandes grillées au feu de bois les pieds dans l'eau.
+      </p>
+
+      <!-- LES 2 BOUTONS EXCLUSIFS : LA CARTE & RÉSERVER -->
+      <div class="hero-luxury-actions">
+        <a href="#carte" class="btn btn-hero-carte">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+          </svg>
+          <span>La Carte</span>
         </a>
-        <a href="#reservation" class="btn btn-gold-hero hero-main-cta">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span>Réserver Table ou Transat</span>
+        <a href="#reservation" class="btn btn-hero-reserver">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <span>Réserver</span>
         </a>
       </div>
 
-      <!-- Chiffres Clés Centrés -->
-      <div class="hero-metrics-ribbon">
-        <div class="metric-block">
-          <span class="m-val">1989</span>
-          <span class="m-txt">Maison Fondée</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-block">
-          <span class="m-val">100%</span>
-          <span class="m-txt">Cuisson au feu de bois</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-block">
-          <span class="m-val">4.6 / 5</span>
-          <span class="m-txt">Avis Google Maps</span>
-        </div>
-      </div>
+      <!-- Indicateur de défilement discret -->
+      <a href="#esprit" class="hero-scroll-invite" aria-label="Défiler vers la suite">
+        <span class="scroll-invite-text">Découvrir le lieu</span>
+        <svg class="scroll-invite-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+      </a>
 
     </div>
   </section>
