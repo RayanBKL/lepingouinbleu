@@ -62,7 +62,6 @@
         <a href="#carte" class="nav-link">La Carte</a>
         <a href="#plage" class="nav-link">La Plage</a>
         <a href="#portfolio" class="nav-link">Galerie Photos</a>
-        <a href="#avis" class="nav-link">Avis Google</a>
         <a href="#infos" class="nav-link">Accès</a>
       </nav>
 
@@ -257,23 +256,27 @@
           Tous nos plats sont cuisinés sur place : poissons et viandes saisis au feu de bois du barbecue, entrées fraîches de saison et formule pour les petits pingouins.
         </p>
 
-        <!-- 4 Onglets de filtrage avec vue Complète par défaut -->
+        <!-- 5 Onglets de filtrage avec vue Complète par défaut -->
         <div class="menu-tabs" role="tablist" aria-label="Catégories du menu">
           <button class="menu-tab-btn active" data-category="tous" role="tab" aria-selected="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             <span>Toute la Carte</span>
           </button>
-          <button class="menu-tab-btn" data-category="barbecue" role="tab" aria-selected="false">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-            <span>Grillades & Poissons au Barbecue</span>
-          </button>
-          <button class="menu-tab-btn" data-category="salades" role="tab" aria-selected="false">
+          <button class="menu-tab-btn" data-category="entrees" role="tab" aria-selected="false">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.5-.33-2.93-.93-4.21A9.97 9.97 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8 0-3.88 2.78-7.13 6.46-7.86.35 1.54 1.13 4.14 2.87 5.88 1.74 1.74 4.34 2.52 5.88 2.87C18.48 16.57 15.48 20 12 20z"/></svg>
-            <span>Entrées Fraîches & Salades</span>
+            <span>Nos Entrées</span>
+          </button>
+          <button class="menu-tab-btn" data-category="froids" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <span>Plats Froids & Salades</span>
+          </button>
+          <button class="menu-tab-btn" data-category="chauds" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <span>Plats Chauds & Grillades</span>
           </button>
           <button class="menu-tab-btn" data-category="enfants" role="tab" aria-selected="false">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <span>Menu Petits Pingouins</span>
+            <span>Petits Pingouins</span>
           </button>
         </div>
       </div>
@@ -284,8 +287,131 @@
         <!-- Panneau des Plats en Grille 2 Colonnes -->
         <div class="menu-items-panel">
           
-          <!-- SECTION 1 : Grillades au Feu de Bois & Poissons (6 plats) -->
-          <div class="menu-section-wrapper" data-menu-cat="barbecue">
+          <!-- SECTION 1 : Nos Entrées (5 plats) -->
+          <div class="menu-section-wrapper" data-menu-cat="entrees">
+            <div class="menu-subgroup-banner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.5-.33-2.93-.93-4.21A9.97 9.97 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8 0-3.88 2.78-7.13 6.46-7.86.35 1.54 1.13 4.14 2.87 5.88 1.74 1.74 4.34 2.52 5.88 2.87C18.48 16.57 15.48 20 12 20z"/></svg>
+              <h3>Nos Entrées</h3>
+            </div>
+
+            <div class="menu-cards-grid">
+              
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Moules grillées au barbecue</h3>
+                  <span class="menu-item-tag signature">Spécialité</span>
+                  <span class="menu-item-price">20 €</span>
+                </div>
+                <p class="menu-item-desc">Nos moules fraîches cuites directement sur la grille du barbecue au feu de bois, parfumées aux herbes de Provence.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Assiette de sardines grillées au barbecue aux herbes de provence</h3>
+                  <span class="menu-item-tag">Poisson Frais</span>
+                  <span class="menu-item-price">19 €</span>
+                </div>
+                <p class="menu-item-desc">Sardines fraîches entières saisies à la flamme du barbecue et assaisonnées aux herbes de Provence et huile d'olive.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Assiette de crevettes, guacamole</h3>
+                  <span class="menu-item-tag">Fraîcheur</span>
+                  <span class="menu-item-price">22 €</span>
+                </div>
+                <p class="menu-item-desc">Belles crevettes roses servies avec un guacamole maison onctueux et quartiers de citron vert.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Assiette Alca</h3>
+                  <span class="menu-item-tag signature">Maison</span>
+                  <span class="menu-item-price">26 €</span>
+                </div>
+                <p class="menu-item-desc">Saumon gravlax maison, burrata au lait de bufflonne, poivre de Timut, jeunes pousses, tomates.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Tartare de saumon</h3>
+                  <span class="menu-item-tag">Iodé</span>
+                  <span class="menu-item-price">25 €</span>
+                </div>
+                <p class="menu-item-desc">Saumon frais découpé au couteau, aneth, échalotes, huile d'olive vierge et agrumes.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SECTION 2 : Nos Plats Froids (6 plats) -->
+          <div class="menu-section-wrapper" data-menu-cat="froids" style="margin-top: 2rem;">
+            <div class="menu-subgroup-banner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              <h3>Nos Plats Froids & Grandes Salades</h3>
+            </div>
+
+            <div class="menu-cards-grid">
+              
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Salade Italienne</h3>
+                  <span class="menu-item-tag">Burrata Bufflonne</span>
+                  <span class="menu-item-price">23 €</span>
+                </div>
+                <p class="menu-item-desc">Jeunes pousses, tomates, burrata au lait de bufflonne, mortadelle, pistaches, pesto de basilic.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Salade Chèvre chaud</h3>
+                  <span class="menu-item-tag signature">Terroir</span>
+                  <span class="menu-item-price">24 €</span>
+                </div>
+                <p class="menu-item-desc">Jeunes pousses, tomates, tartine de chèvre fermier de Montmeyan, jambon Serrano affiné 20 mois minimum, pignons, vinaigrette.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Salade César</h3>
+                  <span class="menu-item-tag">Gourmande</span>
+                  <span class="menu-item-price">24 €</span>
+                </div>
+                <p class="menu-item-desc">Salade romaine, tomates, poulet croustillant, parmesan 16 mois d'affinage, croûtons, sauce césar.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Assiette de poivrons grillés au barbecue puis confits</h3>
+                  <span class="menu-item-tag signature">Spécialité</span>
+                  <span class="menu-item-price">30 €</span>
+                </div>
+                <p class="menu-item-desc">Pesto de basilic, tapenade, parmesan 16 mois d'affinage, burrata au lait de bufflonne, croûtons — servie avec des frites.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Tartare de boeuf, frites</h3>
+                  <span class="menu-item-tag">Viande de Choix</span>
+                  <span class="menu-item-price">26 €</span>
+                </div>
+                <p class="menu-item-desc">Bœuf de qualité supérieure coupé au couteau et assaisonné avec soin, servi avec frites dorées.</p>
+              </div>
+
+              <div class="menu-item-row">
+                <div class="menu-item-head">
+                  <h3 class="menu-item-name">Carpaccio de boeuf</h3>
+                  <span class="menu-item-tag">Burrata & Frites</span>
+                  <span class="menu-item-price">28 €</span>
+                </div>
+                <p class="menu-item-desc">Burrata au lait de bufflonne, pesto, parmesan 16 mois d'affinage, croûtons — servi avec frites.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SECTION 3 : Nos Plats Chauds (5 plats) -->
+          <div class="menu-section-wrapper" data-menu-cat="chauds" style="margin-top: 2rem;">
             <div class="menu-subgroup-banner">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
               <h3>Nos Plats Chauds & Grillades au Barbecue</h3>
@@ -293,15 +419,6 @@
 
             <div class="menu-cards-grid">
               
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Moules au barbecue</h3>
-                  <span class="menu-item-tag signature">Spécialité</span>
-                  <span class="menu-item-price">24 €</span>
-                </div>
-                <p class="menu-item-desc">Nos moules fraîches cuites directement sur la grille du barbecue au feu de bois, parfumées aux herbes de Provence.</p>
-              </div>
-
               <div class="menu-item-row">
                 <div class="menu-item-head">
                   <h3 class="menu-item-name">Tranche d'espadon grillée au barbecue, sauce vierge</h3>
@@ -335,16 +452,16 @@
                   <span class="menu-item-tag">Pain Artisanal</span>
                   <span class="menu-item-price">25 €</span>
                 </div>
-                <p class="menu-item-desc">Le pain est artisanal (100% Maison Laveissière) et le steak haché 150g est grillé au barbecue, fromage affiné et frites.</p>
+                <p class="menu-item-desc">Le pain est artisanal (100% Maison Laveissière) et le steak haché (150g) est grillé au barbecue, fromage affiné et frites.</p>
               </div>
 
               <div class="menu-item-row">
                 <div class="menu-item-head">
-                  <h3 class="menu-item-name">T.Bone de bœuf (race Limousine) grillé au barbecue (env. 500g)</h3>
+                  <h3 class="menu-item-name">T.Bone de boeuf (race Limousine) grillé au barbecue (env. 500g)</h3>
                   <span class="menu-item-tag signature">Viande d'Exception</span>
                   <span class="menu-item-price">43 €</span>
                 </div>
-                <p class="menu-item-desc">Pièce maîtresse persillée cuite à la flamme, servie avec sauce chimichurri maison et fleur de sel.</p>
+                <p class="menu-item-desc">Pièce maîtresse persillée (env. 500g) saisie au feu de bois, servie avec sauce chimichurri maison et fleur de sel.</p>
               </div>
 
             </div>
@@ -352,80 +469,23 @@
             <!-- Note d'accompagnement -->
             <div class="menu-accompany-note">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-              <span><strong>Accompagnement au choix :</strong> frites maison, salade verte, riz pilaf ou ratatouille provençale.</span>
+              <span><strong>Accompagnement au choix :</strong> frites, salade, riz, ou ratatouille.</span>
             </div>
           </div>
 
-          <!-- SECTION 2 : Entrées Fraîches & Salades (5 plats) -->
-          <div class="menu-section-wrapper" data-menu-cat="salades" style="margin-top: 2rem;">
-            <div class="menu-subgroup-banner">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.5-.33-2.93-.93-4.21A9.97 9.97 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8 0-3.88 2.78-7.13 6.46-7.86.35 1.54 1.13 4.14 2.87 5.88 1.74 1.74 4.34 2.52 5.88 2.87C18.48 16.57 15.48 20 12 20z"/></svg>
-              <h3>Nos Entrées Fraîches & Salades</h3>
-            </div>
-
-            <div class="menu-cards-grid">
-              
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Salade du Pingouin</h3>
-                  <span class="menu-item-tag signature">Signature</span>
-                  <span class="menu-item-price">25 €</span>
-                </div>
-                <p class="menu-item-desc">Mesclun, crevettes roses fraîches marinées, avocat, tomates confites et vinaigrette aux agrumes.</p>
-              </div>
-
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Salade chèvre chaud fermier</h3>
-                  <span class="menu-item-tag">Terroir Provençal</span>
-                  <span class="menu-item-price">22 €</span>
-                </div>
-                <p class="menu-item-desc">Fromage de chèvre fermier de Montmeyan rôti sur toast, miel de lavande, noix et mesclun croquant.</p>
-              </div>
-
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Salade Italienne</h3>
-                  <span class="menu-item-tag">Fraîcheur</span>
-                  <span class="menu-item-price">23 €</span>
-                </div>
-                <p class="menu-item-desc">Burrata crémeuse, mortadelle artisanale, tomates cerises, copeaux de parmesan et roquette.</p>
-              </div>
-
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Tartare de saumon frais</h3>
-                  <span class="menu-item-tag">Iodé</span>
-                  <span class="menu-item-price">25 €</span>
-                </div>
-                <p class="menu-item-desc">Saumon découpé au couteau, aneth fraîche, échalotes, huile d'olive vierge et frites maison.</p>
-              </div>
-
-              <div class="menu-item-row">
-                <div class="menu-item-head">
-                  <h3 class="menu-item-name">Carpaccio de bœuf & burrata</h3>
-                  <span class="menu-item-tag">Gourmand</span>
-                  <span class="menu-item-price">25 €</span>
-                </div>
-                <p class="menu-item-desc">Fines tranches de bœuf charolais, cœur de burrata crémeuse, câpres à queue et huile de basilic.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- SECTION 3 : Menu Petits Pingouins (< 10 ans) -->
+          <!-- SECTION 4 : Pour les petits pingouins (3 plats) -->
           <div class="menu-section-wrapper" data-menu-cat="enfants" style="margin-top: 2rem;">
             <div class="menu-subgroup-banner">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <h3>Menu Petits Pingouins (moins de 10 ans)</h3>
+              <h3>Pour les petits pingouins (moins de 10 ans)</h3>
             </div>
 
             <div class="menu-item-row tier-kids" style="margin-bottom: 1rem;">
               <div class="menu-item-head">
                 <h3 class="menu-item-name">Formule Enfants Complète</h3>
-                <span class="menu-item-tag signature">Inclus Dessert & Boisson</span>
+                <span class="menu-item-tag signature">Inclus Jus & Dessert</span>
               </div>
-              <p class="menu-item-desc">Tous les menus enfants incluent un petit jus de fruit et en dessert une glace ou une compote.</p>
+              <p class="menu-item-desc">Inclus un petit jus de fruit et en dessert une glace ou une compote.</p>
             </div>
 
             <div class="menu-cards-grid">
@@ -435,15 +495,15 @@
                   <h3 class="menu-item-name">Steak haché 150g grillé au barbecue</h3>
                   <span class="menu-item-price">17 €</span>
                 </div>
-                <p class="menu-item-desc">Servi avec frites croustillantes ou riz blanc.</p>
+                <p class="menu-item-desc">Steak pur bœuf cuit à la flamme, servi avec frites ou riz.</p>
               </div>
 
               <div class="menu-item-row">
                 <div class="menu-item-head">
-                  <h3 class="menu-item-name">Poulet pané croustillant</h3>
+                  <h3 class="menu-item-name">Poulet pané frit</h3>
                   <span class="menu-item-price">16 €</span>
                 </div>
-                <p class="menu-item-desc">Morceaux de filet de poulet panés faits maison avec frites.</p>
+                <p class="menu-item-desc">Morceaux de poulet panés faits maison avec frites croustillantes.</p>
               </div>
 
               <div class="menu-item-row">
@@ -451,7 +511,7 @@
                   <h3 class="menu-item-name">La petite tranche d'espadon grillée au barbecue</h3>
                   <span class="menu-item-price">17 €</span>
                 </div>
-                <p class="menu-item-desc">Filet de poisson frais sans arêtes saisi au barbecue, riz ou ratatouille.</p>
+                <p class="menu-item-desc">Tranche d'espadon frais sans arêtes saisie au barbecue, riz ou ratatouille.</p>
               </div>
 
             </div>
@@ -674,112 +734,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================= -->
-  <!-- SECTION 5 : AVIS GOOGLE CLIENTS AVEC BOUTON GOOGLE MAPS -->
-  <!-- ========================================================================= -->
-  <section class="section-block reviews-section" id="avis">
-    <div class="container">
-      
-      <div class="reviews-header">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span class="kicker-text">Avis Clients</span>
-        </div>
-        <h2 class="section-title">Ce que disent nos clients</h2>
-        
-        <div class="google-badge-top">
-          <svg class="google-icon" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-          </svg>
-          <div class="google-score-info">
-            <div class="stars-svg-row">
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon half" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <span class="google-score"><strong>4.6 / 5</strong> sur Google Maps (Avis vérifiés)</span>
-          </div>
-        </div>
 
-        <div style="margin-top: 1rem;">
-          <a href="https://www.google.com/maps/search/?api=1&query=Le+Pingouin+Bleu+Grimaud" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-google-map-action">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            <span>Consulter tous les avis réels sur Google Maps</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="reviews-grid">
-        
-        <div class="review-card">
-          <div class="review-head">
-            <div class="reviewer-avatar">JM</div>
-            <div class="reviewer-meta">
-              <span class="reviewer-name">Jean-Marc P.</span>
-              <span class="review-date">Guide Local • Avis Google vérifié</span>
-            </div>
-            <div class="stars-svg-row">
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-          </div>
-          <p class="review-body">
-            « Cadre idyllique sous les tamaris, les pieds dans l'eau face à la mer. Les poissons et gambas grillés au barbecue sont un régal. Ambiance conviviale et authentique, une vraie adresse coup de cœur à Grimaud ! »
-          </p>
-        </div>
-
-        <div class="review-card">
-          <div class="review-head">
-            <div class="reviewer-avatar">SD</div>
-            <div class="reviewer-meta">
-              <span class="reviewer-name">Sophie D.</span>
-              <span class="review-date">Avis Google vérifié</span>
-            </div>
-            <div class="stars-svg-row">
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-          </div>
-          <p class="review-body">
-            « Superbe journée sur la plage de Guerrevieille. Transats confortables, service attentif et les moules au feu de bois sont absolument incontournables. Nous reviendrons sans hésiter. »
-          </p>
-        </div>
-
-        <div class="review-card">
-          <div class="review-head">
-            <div class="reviewer-avatar">MV</div>
-            <div class="reviewer-meta">
-              <span class="reviewer-name">Marc V.</span>
-              <span class="review-date">Avis Google vérifié</span>
-            </div>
-            <div class="stars-svg-row">
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg class="star-icon empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-          </div>
-          <p class="review-body">
-            « Emplacement de rêve face au golfe de Saint-Tropez. La cuisson au barbecue donne une saveur incomparable aux viandes et aux poissons. Pensez bien à réserver en plein été pour avoir une table sous les arbres. »
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========================================================================= -->
   <!-- SECTION 6 : RÉSERVATION & CARTE GOOGLE MAPS -->
@@ -952,7 +907,7 @@
               <iframe 
                 src="https://maps.google.com/maps?q=Le+Pingouin+Bleu,+RD+559,+Plage+de+Guerrevieille,+83310+Grimaud&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
-                height="220" 
+                height="200" 
                 style="border:0; border-radius: 12px;" 
                 allowfullscreen="" 
                 loading="lazy" 
@@ -963,6 +918,45 @@
               <a href="https://www.google.com/maps/dir/?api=1&destination=Le+Pingouin+Bleu+RD+559+Plage+de+Guerrevieille+83310+Grimaud" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full btn-map">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                 <span>Itinéraire Google Maps direct</span>
+              </a>
+            </div>
+
+            <!-- Bloc Avis Google Maps intégré dans Accès & Contact -->
+            <div class="info-google-reviews-card">
+              <div class="google-reviews-top-row">
+                <svg class="google-icon" width="22" height="22" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <div class="google-rating-summary">
+                  <div class="stars-svg-row">
+                    <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg class="star-icon fill" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg class="star-icon half" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <span class="google-score-text"><strong>4.6 / 5</strong> (Avis Google Maps vérifiés)</span>
+                </div>
+              </div>
+
+              <!-- Extraits d'avis clients -->
+              <div class="google-mini-reviews">
+                <div class="mini-review-item">
+                  <span class="mini-reviewer">Jean-Marc P. <small>• Guide Local</small></span>
+                  <p class="mini-quote">« Cadre idyllique sous les tamaris, les pieds dans l'eau. Les poissons et gambas au barbecue sont un régal. »</p>
+                </div>
+                <div class="mini-review-item">
+                  <span class="mini-reviewer">Sophie D. <small>• Avis vérifié</small></span>
+                  <p class="mini-quote">« Superbe journée sur la plage de Guerrevieille. Transats confortables, service attentif et les moules au feu de bois incontournables. »</p>
+                </div>
+              </div>
+
+              <a href="https://www.google.com/maps/search/?api=1&query=Le+Pingouin+Bleu+Grimaud" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full btn-google-reviews-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>Consulter les avis réels sur Google Maps</span>
               </a>
             </div>
 
@@ -1050,7 +1044,7 @@
             <li><a href="#carte">La Carte du Barbecue</a></li>
             <li><a href="#plage">La Plage Privée</a></li>
             <li><a href="#portfolio">Galerie Photos</a></li>
-            <li><a href="#avis">Avis Google</a></li>
+            <li><a href="#infos">Accès & Contact</a></li>
             <li><a href="#reservation">Réservations</a></li>
           </ul>
         </div>
